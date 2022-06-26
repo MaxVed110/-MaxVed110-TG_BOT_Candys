@@ -35,6 +35,8 @@ def start(update: Update, _):
 
 
 def game_step(update: Update, _):
+    #принимает сообщение юзера от start, главный цикл игры
+
     global user_step
     global ii_step
     global count
@@ -73,6 +75,8 @@ def game_step(update: Update, _):
 
 
 def exit_user(update: Update, _):
+
+    #выход из бота, конец диалога
 
     logger_new.logger.info(f'Пользователь // {info} // вышел из чата')
 

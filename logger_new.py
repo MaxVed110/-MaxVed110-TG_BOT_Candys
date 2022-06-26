@@ -10,6 +10,6 @@ log_save.setFormatter(formatter)
 logger.addHandler(log_save)
 
 
-def logger_cls():
+def logger_clr():
     with open('logger.log', 'w'):
         pass

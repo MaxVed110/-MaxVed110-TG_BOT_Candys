@@ -1,13 +1,13 @@
-from telegram import Update
-from telegram.ext import Updater, CommandHandler, MessageHandler, filters, ConversationHandler
 import tg_commander
 import logger_new
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters, ConversationHandler
+from controller import get_a_token
 
 if __name__ == '__main__':
 
-    logger_new.logger_cls()
+    logger_new.logger_clr()
 
-    updater = Updater('5433876542:AAHm2Ui64wlqht70EtD9FPJWBMJ8Kz66Cb8')
+    updater = Updater(get_a_token('token.txt'))
     dispatcher = updater.dispatcher
     start_handler = CommandHandler('start', tg_commander.start_game_bot)
     game_handler = ConversationHandler(
